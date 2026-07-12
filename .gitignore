@@ -1,0 +1,7 @@
+# Служебная папка Obsidian — вика просматривается им, но настройки не версионируются
+.obsidian/
+
+# Служебное
+_session-start.md
+.DS_Store
+Thumbs.db
