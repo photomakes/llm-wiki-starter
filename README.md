@@ -2,6 +2,8 @@
 
 **🇷🇺 Русская версия (основная): [README.ru.md](README.ru.md)**
 
+---
+
 A ready-made skeleton for an AI agent's long-term memory and knowledge base. It
 extends the [Karpathy LLM-wiki method](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
 — the wiki is one layer of four, not the whole system.
