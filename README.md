@@ -9,6 +9,11 @@ everything into one file breaks within a week: it bloats, facts duplicate, copie
 drift. This repo is a **layered** storage system where each layer has one role —
 clone it, keep the layers your scale needs, fill them with your own content.
 
+> **Snapshot as of July 2026.** The live system this skeleton was taken from has grown since: a per-project local
+> wiki (`__wiki/`), an agent workspace folder (`__claude/`), a root `CLAUDE.md` with a "a thing of this type appeared →
+> it goes here" table, and a script-built wiki index. The core idea is unchanged. The skeleton gets updated when a real
+> recipient appears, not on a schedule.
+
 > **🇷🇺 This project is Russian-first.** The full documentation, the scale ladder
 > that tells you which layers you actually need, and the method guides all live in
 > **[README.ru.md](README.ru.md)** — start there.
