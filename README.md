@@ -1,21 +1,11 @@
 # llm-wiki-starter
 
-A ready-made skeleton for an AI agent's **layered long-term memory**: rules ·
-memory · wiki · skills. It extends the [Karpathy LLM-wiki method](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
-— the wiki is one layer of four, not the whole system.
+[Русская документация и быстрый старт](README.ru.md)
 
-An AI coding agent starts every session from scratch and forgets. Dumping
-everything into one file breaks within a week: it bloats, facts duplicate, copies
-drift. This repo is a **layered** storage system where each layer has one role —
-clone it, keep the layers your scale needs, fill them with your own content.
+A Russian-first starter for an AI agent’s layered long-term memory. It extends the LLM-wiki idea by separating four roles: rules, project memory, a shared wiki, and reusable skills. The Karpathy method informs the wiki layer.
 
-> **Snapshot as of July 2026.** The live system this skeleton was taken from has grown since: a per-project local
-> wiki (`__wiki/`), an agent workspace folder (`__claude/`), a root `CLAUDE.md` with a "a thing of this type appeared →
-> it goes here" table, and a script-built wiki index. The core idea is unchanged. The skeleton gets updated when a real
-> recipient appears, not on a schedule.
+Start with the smallest setup that solves your problem. A one-off task can stay in the chat. A long-running project can keep its context and next steps in Git. Add shared knowledge or reusable methods when you need them across tasks or projects.
 
-> **🇷🇺 This project is Russian-first.** The full documentation, the scale ladder
-> that tells you which layers you actually need, and the method guides all live in
-> **[README.ru.md](README.ru.md)** — start there.
+Open the repository in Codex or Claude Code and ask it to continue the import task in the fictional demo project. The [demo](projects/demo-project/README.md) shows how a fresh session finds the next step and the decision that governs it.
 
-License: [MIT](LICENSE).
+[Storage guide in Russian](share/storage-architecture.md) · [MIT license](LICENSE)
