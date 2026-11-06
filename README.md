@@ -1,11 +1,38 @@
 # llm-wiki-starter
 
-[Русская документация и быстрый старт](README.ru.md)
+[English overview](README.en.md)
 
-A Russian-first starter for an AI agent’s layered long-term memory. It extends the LLM-wiki idea by separating four roles: rules, project memory, a shared wiki, and reusable skills. The Karpathy method informs the wiki layer.
+Многослойная система долговременной памяти ИИ-агента. Развитие идеи LLM-wiki (метод Карпаты — один слой из четырёх, а не вся система), а не её копия.
+Ключевое сверх неё: типизация хранилищ по ролям (правила · память · вика · навыки); лестница масштаба — какой слой заводить в ответ на какую боль, вплоть до «на малом проекте не нужен ни один»; RU-first.
 
-Start with the smallest setup that solves your problem. A one-off task can stay in the chat. A long-running project can keep its context and next steps in Git. Add shared knowledge or reusable methods when you need them across tasks or projects.
+Например, открытая задача и её следующий шаг остаются в документах проекта. Приём, который пригодится в разных проектах, можно описать в общей вике или методике.
 
-Clone this repository, open its root in Codex or Claude Code, and ask the agent to find the next step for the import task in the fictional demo project. The [demo](projects/demo-project/README.md) shows how a fresh session finds the next step and the decision that governs it.
+| Слой | Когда нужен | Пример |
+|---|---|---|
+| Правила | Агенту нужны постоянные договорённости и указатели | [AGENTS.md](AGENTS.md) |
+| Память проекта | Между сессиями нужно сохранять состояние, решения и следующий шаг | [Вымышленный проект](projects/demo-project/README.md) |
+| Вика | Знание пригодится в других задачах или проектах | [Каталог вики](wiki/index.md) |
+| Навыки | Приём нужно повторять или передавать | [Дерево возможностей](share/capability-tree.md) |
 
-[Storage guide in Russian](share/storage-architecture.md) · [MIT license](LICENSE)
+Навык в стартере представлен методикой Markdown, которую агент открывает по задаче.
+
+## Лестница масштаба
+
+| Что происходит | С чего начать |
+|---|---|
+| Разовая задача | Хватает текущего чата |
+| Небольшой проект с повторяющейся договорённостью | Короткий файл правил |
+| Долгий проект, контекст приходится пересказывать | Паспорт и реестр открытых задач в Git проекта |
+| Проектных материалов стало много | Локальная `__wiki/` с навигацией по темам |
+| Знание используется в разных проектах | Общая вика с указателями из проектов |
+| Рабочий приём нужно передать или повторить | Одна методика в `share/` |
+
+## Быстрый старт
+
+1. Клонируйте репозиторий и откройте его корневую папку в агенте. Для Codex вход через [AGENTS.md](AGENTS.md), для Claude Code через [CLAUDE.md](CLAUDE.md).
+2. В новом чате попросите: «Найди следующий шаг по задаче импорта в вымышленном проекте и объясни, как проверить результат». По [реестру](projects/demo-project/open-threads.md) и [решению об импорте](projects/demo-project/import-policy.md) агент должен предложить проверить CSV с новой и уже существующей карточками, назвать ожидаемые статусы и указать, что до подтверждения коллекция остаётся прежней.
+3. Для своего проекта возьмите [шаблон AGENTS.md](templates/AGENTS.template.md) и нужные [бланки](templates/README.md). Если к работе нужно возвращаться между чатами, начните с паспорта и реестра. Общую вику и методики подключайте по мере необходимости.
+
+[Проверка в двух новых чатах](projects/demo-project/README.md#проверьте-продолжение-в-двух-новых-чатах) показывает, подхватывает ли агент изменённый статус из реестра.
+
+[Справочник хранилищ](share/storage-architecture.md) объясняет, где сохранять результат и как проверить, что работу можно продолжить в новом чате. Метод Карпаты описан в [отдельной странице вики](wiki/karpathy-method.md). Лицензия [MIT](LICENSE).
